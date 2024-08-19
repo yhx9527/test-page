@@ -9,6 +9,7 @@
 <body>
   <div>ddddddd</div>
   <div id="container"></div>
+  <div id="frame"></div>
   <script>
     var options = {
       // Required. Called when a user selects an item in the Chooser.
@@ -36,11 +37,15 @@
       // while true allows the user to select both folders and files.
       // You cannot specify `linkType: "direct"` when using `folderselect: true`.
       folderselect: false, // or true
-      iframe: false,
+      iframe: true,
       trigger: "js",
     };
-    var button = Dropbox.createChooseButton(options);
-    document.getElementById("container").appendChild(button);
+    Dropbox.choose(options);
+    // var button = Dropbox.createChooseButton(options);
+    // var box = document.getElementById("container");
+    // var a = Dropbox.createChooserWidget(options);
+    // console.log("ddddd", a);
+    // document.getElementById("container").appendChild(button);
   </script>
 </body>
 </html>
