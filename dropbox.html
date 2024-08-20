@@ -46,6 +46,23 @@
     // var a = Dropbox.createChooserWidget(options);
     // console.log("ddddd", a);
     document.getElementById("container").appendChild(button);
+
+    var box = document.getElementById("frame");
+    var options = {
+      // Shared link to Dropbox file
+      link: "https://www.dropbox.com/scl/fi/2i7sqvd51tu4yelalri2f/test-g.png?rlkey=eppkj4yoo2hy3h5nys4aki0j0&st=4bm1aywx&dl=0",
+      file: {
+        // Sets the zoom mode for embedded files. Defaults to 'best'.
+        zoom: "best" // or "fit"
+      },
+      folder: {
+        // Sets the view mode for embedded folders. Defaults to 'list'.
+        view: "list", // or "grid"
+        headerSize: "normal" // or "small"
+      }
+    }
+    Dropbox.embed(options, box);
+    
   </script>
 </body>
 </html>
