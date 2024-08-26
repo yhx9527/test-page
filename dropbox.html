@@ -62,7 +62,21 @@
       }
     }
     Dropbox.embed(options, box);
-    
+
+    const comp = new Dropbox.Chooser({
+      appKey: "1ncfwbdqatpdz81",
+      onSuccess: (e, t) => {
+        console.log("dddddd", e, t)
+      },
+      onCancel: (a) => {
+        console.log("hhhhhh", a)
+      },
+    })
+    var a = Dropbox.mount(comp, document.getElementById("container"));
+    window.test = () => {
+       Dropbox.unmount(comp);
+       console.log("uuuuuuuu")
+    }
   </script>
 </body>
 </html>
