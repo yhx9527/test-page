@@ -11,12 +11,14 @@
   <div>ddddddd</div>
   <div id="container"></div>
   <div id="frame"></div>
+  <div id="detail"></div>
   <script>
     var options = {
       // Required. Called when a user selects an item in the Chooser.
       success: function(files) {
           console.log("hhhhhhh", files);
-          window.alert(JSON.stringify(files));
+          const div = document.getElementById("detail");
+          div.innerText = JSON.stringify(files);
       },
       // Optional. Called when the user closes the dialog without selecting a file
       // and does not include any parameters.
