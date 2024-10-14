@@ -16,6 +16,7 @@
       // Required. Called when a user selects an item in the Chooser.
       success: function(files) {
           console.log("hhhhhhh", files);
+          window.alert(JSON.stringify(files));
       },
       // Optional. Called when the user closes the dialog without selecting a file
       // and does not include any parameters.
@@ -74,7 +75,7 @@
       },
       linkType: "preview",
     })
-    var a = Dropbox.mount(comp, document.getElementById("container"));
+    //var a = Dropbox.mount(comp, document.getElementById("container"));
     window.test = () => {
        Dropbox.unmount(comp);
        console.log("uuuuuuuu")
