@@ -50,6 +50,8 @@
     // var a = Dropbox.createChooserWidget(options);
     // console.log("ddddd", a);
     document.getElementById("container").appendChild(button);
+    var button1 = Dropbox.createChooseButton({...options, linkType: "direct"});
+    document.getElementById("container").appendChild(button1);
 
     var box = document.getElementById("frame");
     var options = {
